@@ -1,29 +1,61 @@
-# What is this?
-This is a copy of the kde pager plasmoid, copied from `/usr/share/plasma/plasmoids/`, and adapted to my needs.
+# KDE Pager Plasmoid (Customized)
 
-# What does this add?
-I have added the options outlined in red in this image:
+This is a customized version of the KDE Pager plasmoid, originally copied from `/usr/share/plasma/plasmoids/` and adapted to fit my needs.
 
-![new options](images/Screenshot_20250706_093930.png)
+---
 
+## ✨ Added Features
 
-# How to install
-1. Copy the whole directory to `~/.local/share/plasma/plasmoids/`, 
-    so that the metadata file ends up at `~/.local/share/plasma/plasmoids/org.kde.plasma.pager/metadata.json`.
+New options have been added, highlighted in red below:
 
-2. Either `killall plasmashell && kstart5 plasmashell`, or just log out and back in again.
-    if you had a pager on your desktop somewhere, it will have been replaced with the new one.
+![New options screenshot](images/Screenshot_20250706_093930.png)
 
-# How to uninstall
-Delete `~/.local/share/plasma/plasmoids/org.kde.plasma.pager`
+---
 
-# How to debug
-After installing to the share folder, just `plasmawindowed NAME_OF_PLASMOID`
+## 🚀 Installation
 
+1. Copy the entire directory to your local plasmoids folder:
+    ```sh
+    cp -r org.kde.plasma.pager ~/.local/share/plasma/plasmoids/
+    ```
+    Ensure that [metadata.json](http://_vscodecontentref_/0) ends up at:
+    ```
+    ~/.local/share/plasma/plasmoids/org.kde.plasma.pager/metadata.json
+    ```
 
-# Tips
-To test the commands, try:
+2. Restart Plasma to apply changes:
+    - Either run:
+      ```sh
+      killall plasmashell && kstart5 plasmashell
+      ```
+    - Or simply log out and log back in.
+
+    > **Note:** If you already had a Pager widget, it will be replaced with this customized version.
+
+---
+
+## ❌ Uninstallation
+
+To remove the plasmoid, simply delete its directory:
+```sh
+rm -rf ~/.local/share/plasma/plasmoids/org.kde.plasma.pager
+```
+
+---
+
+## 🐞 Debugging
+
+After installing, you can test the plasmoid using:
+```sh
+plasmawindowed org.kde.plasma.pager
+```
+
+---
+
+## 💡 Tips
+
+For testing commands, you can use:
 - `kdialog --msgbox "This is a test message box!"`
 
-Or for scrolling commands, better something like:
+For scrolling commands, it's better to use something like:
 - `pactl set-sink-volume @DEFAULT_SINK@ -1%` since it shows an OSD/popup
