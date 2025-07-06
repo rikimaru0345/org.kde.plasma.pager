@@ -1,7 +1,8 @@
 # What is this?
-This is a copy of the kde pager plasmoid, copied from `/usr/share/plasma/plasmoids/`, and adapter to my needs.
+This is a copy of the kde pager plasmoid, copied from `/usr/share/plasma/plasmoids/`, and adapted to my needs.
 
-Specifically these options are new:
+# What does this add?
+I have added the options outlined in red in this image:
 
 ![new options](images/Screenshot_20250706_093930.png)
 
