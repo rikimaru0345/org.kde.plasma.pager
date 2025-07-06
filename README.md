@@ -1,13 +1,16 @@
+# What is this?
+This is a copy of the kde pager plasmoid, copied from `/usr/share/plasma/plasmoids/`, and adapter to my needs.
 
+Specifically these options are new:
 
-This was copied from `/usr/share/plasma/plasmoids/`
+![new options](images/Screenshot_20250706_093930.png)
 
 
 # How to install
 1. Copy the whole directory to `~/.local/share/plasma/plasmoids/`, 
     so that the metadata file ends up at `~/.local/share/plasma/plasmoids/org.kde.plasma.pager/metadata.json`.
 
-2. Either `killall plasmashell && kstart5 plasmashell`, or just log out and back in again
+2. Either `killall plasmashell && kstart5 plasmashell`, or just log out and back in again.
     if you had a pager on your desktop somewhere, it will have been replaced with the new one.
 
 # How to uninstall
